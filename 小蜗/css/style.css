@@ -1,0 +1,70 @@
+/*公共样式*/
+body{
+    margin: 0;
+    padding: 0;
+}
+/*顶部轮播开始*/
+#banner { position: relative; width: 1000px; height: 200px; border: 1px solid #666; overflow: hidden;margin: 0 auto;margin-bottom: 10px; }
+#banner_list img { border: 0px; }
+#banner_bg { position: absolute; bottom: 0; background-color: #000; height: 30px; filter: Alpha(Opacity=30); opacity: 0.3; z-index: 1000; cursor: pointer; width: 478px; }
+#banner_info { position: absolute; bottom: 0; left: 5px; height: 22px; color: #fff; z-index: 1001; cursor: pointer }
+#banner_text { position: absolute; width: 120px; z-index: 1002; right: 3px; bottom: 3px; }
+#banner ul { position: absolute; list-style-type: none; filter: Alpha(Opacity=80); opacity: 0.8; z-index: 1002; margin: 0; padding: 0; bottom: 3px; right: 5px; }
+#banner ul li { padding: 0px 8px; float: left; display: block; color: #FFF; background: #6f4f67; cursor: pointer; border: 1px solid #333; }
+#banner ul li.on { background-color: #000; }
+#banner_list a { position: absolute; }
+/* 让四张图片都可以重叠在一起*/
+/*顶部轮播结束*/
+.tonglan{
+    width: 100%;
+    height: 40px;
+    background:#009304;
+}
+/*主体*/
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    background: white;
+}
+/*导航*/
+.nav{
+    width: 1040px;
+    height: 40px;
+    margin-top: -50px;
+    margin-left: -20px;
+    background:#01A800;
+}
+.nav ul{
+    margin: 0 auto;
+    padding-left: 84px;
+}
+.nav li{
+    display: inline-block;
+    line-height: 40px;
+    margin-right: 20px;
+    color: white;
+}
+.nav li a{
+    color: white;
+    text-decoration: none;
+}
+/*主体左边*/
+.mainleft{
+    margin-top: 10px;
+    width: 250px;
+}
+.lefttitle{
+    height: 35px;
+    line-height: 35px;
+    background:url("http://www.35236.hx116.com/images/shop01/left01.jpg") no-repeat left center;
+}
+.lefttitle h4{
+    color: white;
+    padding-left: 40px;
+}
+.lefttitleinfo{
+    border: solid 1px #B3E394;
+    border-top: none;
+    width: 250px;
+    line-height: 20px;
+}
