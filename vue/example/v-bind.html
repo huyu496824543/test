@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-bind 指令</title>
+    <style>
+        .classA{
+            color: red;
+        }
+        .classB{
+            font-size: 150%;
+        }
+    </style>
+</head>
+<body>
+<h1>v-bind 指令</h1>
+<hr>
+<div id="app">
+    <p><img v-bind:src="imgSrc" alt="" width="200" /></p>
+    <p><a :href="url" target="_blank">百度</a></p>
+    <hr/>
+    <div :class="className">1、绑定classA</div>
+    <div :class="{classA:isOk}">2、绑定class中的判断</div>
+    <div :class="[classA,classB]">3、绑定class中的数组</div>
+    <div :class="isOk?classA:classB">4、绑定class中的三元表达式判断</div>
+    <div :style="{color:red,fontSize:font}">5、绑定style</div>
+    <div :style="styleObject">6、用对象绑定style样式</div>
+    <hr/>
+    <input type="checkbox" id="isOk" v-model="isOk"/>
+    <label for="isOk" v-text="isOk"></label>
+
+</div>
+
+<script type="text/javascript">
+    var app=new Vue({
+        el:'#app',
+        data:{
+            imgSrc:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505726240815&di=26387773c70b5c04bb554893273ff61f&imgtype=jpg&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F21a4462309f79052e578c5ff05f3d7ca7acbd588.jpg',
+            url:'https://www.baidu.com',
+            className:'classA',
+            isOk:true,
+            classA:'classA',
+            classB:'classB',
+            red:'red',
+            font:'12px',
+            styleObject:{
+                fontSize:'24px',
+                color:'green'
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
